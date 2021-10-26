@@ -9,6 +9,12 @@ import UIKit
 
 class DataProvider {
 	
+	static func makeProfileData() -> [(String, UIImage?)] {
+		return [
+			("Friends", UIImage(named: "friends"))
+		]
+	}
+	
 	static func makeData() -> [(String, [User])] {
 		
 		var aSection: [User] = []

@@ -13,6 +13,8 @@
 		A351B8C727239A3D008311D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C627239A3D008311D8 /* Utils.swift */; };
 		A351B8C927239D85008311D8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C827239D85008311D8 /* FriendsViewController.swift */; };
 		A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8CA27239E0D008311D8 /* FriendCell.swift */; };
+		A38412382728A61500435223 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38412372728A61500435223 /* AppRouter.swift */; };
+		A384123A2728A6A200435223 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38412392728A6A200435223 /* TabBarViewController.swift */; };
 		A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F44C272240ED00C627B9 /* AppDelegate.swift */; };
 		A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F44E272240ED00C627B9 /* SceneDelegate.swift */; };
 		A3C1F456272240F000C627B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F455272240F000C627B9 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		A351B8C627239A3D008311D8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A351B8C827239D85008311D8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A351B8CA27239E0D008311D8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		A38412372728A61500435223 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A38412392728A6A200435223 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A3C1F449272240ED00C627B9 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C1F44C272240ED00C627B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C1F44E272240ED00C627B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A351B8BE272391BA008311D8 /* ViewControllers */ = {
+		A32855C52728C5970026F936 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A351B8BE272391BA008311D8 /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				A3C1F460272241A300C627B9 /* WelcomeViewController.swift */,
@@ -73,8 +85,9 @@
 				A351B8C127239391008311D8 /* LoginViewController.swift */,
 				A351B8C827239D85008311D8 /* FriendsViewController.swift */,
 				A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */,
+				A38412392728A6A200435223 /* TabBarViewController.swift */,
 			);
-			path = ViewControllers;
+			path = VC;
 			sourceTree = "<group>";
 		};
 		A351B8C527239A30008311D8 /* Utils */ = {
@@ -83,6 +96,14 @@
 				A351B8C627239A3D008311D8 /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A38412362728A60800435223 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A38412372728A61500435223 /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		A3C1F440272240ED00C627B9 = {
@@ -104,16 +125,17 @@
 		A3C1F44B272240ED00C627B9 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
+				A32855C52728C5970026F936 /* Cells */,
+				A38412362728A60800435223 /* Router */,
 				A3CB7DA0272790B800666247 /* Data */,
 				A351B8C527239A30008311D8 /* Utils */,
-				A351B8BE272391BA008311D8 /* ViewControllers */,
+				A351B8BE272391BA008311D8 /* VC */,
 				A3C1F4622722460500C627B9 /* Components */,
 				A3C1F44C272240ED00C627B9 /* AppDelegate.swift */,
 				A3C1F44E272240ED00C627B9 /* SceneDelegate.swift */,
 				A3C1F455272240F000C627B9 /* Assets.xcassets */,
 				A3C1F457272240F000C627B9 /* LaunchScreen.storyboard */,
 				A3C1F45A272240F000C627B9 /* Info.plist */,
-				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -213,11 +235,13 @@
 			files = (
 				A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */,
 				A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */,
+				A38412382728A61500435223 /* AppRouter.swift in Sources */,
 				A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */,
 				A3C1F46C27224E1100C627B9 /* VStack.swift in Sources */,
 				A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */,
 				A351B8C927239D85008311D8 /* FriendsViewController.swift in Sources */,
 				A3CB7DA42727913100666247 /* DataProvider.swift in Sources */,
+				A384123A2728A6A200435223 /* TabBarViewController.swift in Sources */,
 				A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */,
 				A3CB7DA2272790D300666247 /* User.swift in Sources */,
 				A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */,

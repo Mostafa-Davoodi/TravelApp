@@ -107,8 +107,10 @@ class SignUpViewController: UIViewController {
 	}
 	
 	@objc func signUpHandler() {
-		let profileVC = ProfileViewController()
-		self.navigationController?.pushViewController(profileVC, animated: true)
+//		let profileVC = ProfileViewController()
+//		self.navigationController?.pushViewController(profileVC, animated: true)
+		let vc = TabBarViewController()
+		AppRouter.navigate(to: vc)
 	}
 	
 }

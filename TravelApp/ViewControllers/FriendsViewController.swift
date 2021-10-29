@@ -38,10 +38,17 @@ class FriendsViewController: UITableViewController {
 		
 		let cellData = data[indexPath.section].1[indexPath.row]
 		
-		cell.nickNameLabel.text = cellData.nickName
-		cell.locationLabel.text = cellData.location
-		cell.ageLabel.text = cellData.age
-		cell.avatarView.image = cellData.image
+		cell.updateView(
+			nickName: cellData.nickName,
+			age: cellData.age,
+			location: cellData.location,
+			image: cellData.image
+		)
+		
+//		cell.nickNameLabel.text = cellData.nickName
+//		cell.locationLabel.text = cellData.location
+//		cell.ageLabel.text = cellData.age
+//		cell.avatarView.image = cellData.image
 
 		return cell
 	}

@@ -65,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A314C4962728DDC700AB81CA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A351B8BE272391BA008311D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +112,7 @@
 		A3C1F44B272240ED00C627B9 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
+				A314C4962728DDC700AB81CA /* Cell */,
 				A3CB7DA0272790B800666247 /* Data */,
 				A351B8C527239A30008311D8 /* Utils */,
 				A351B8BE272391BA008311D8 /* ViewControllers */,
@@ -113,7 +122,6 @@
 				A3C1F455272240F000C627B9 /* Assets.xcassets */,
 				A3C1F457272240F000C627B9 /* LaunchScreen.storyboard */,
 				A3C1F45A272240F000C627B9 /* Info.plist */,
-				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";

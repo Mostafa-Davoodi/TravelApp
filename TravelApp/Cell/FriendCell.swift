@@ -85,7 +85,6 @@ class FriendCell: UITableViewCell {
 	}
 	
 	func setupView() {
-
 		contentView.addSubview(contentStack)
 		NSLayoutConstraint.activate([
 			contentStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -94,7 +93,18 @@ class FriendCell: UITableViewCell {
 			contentStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 			
 		])
-		
+	}
+	
+	func updateView(
+		nickName: String,
+		age: String,
+		location: String,
+		image: UIImage?
+	) {
+		nickNameLabel.text = nickName
+		ageLabel.text = age
+		locationLabel.text = location
+		avatarView.image = image
 	}
 	
 }

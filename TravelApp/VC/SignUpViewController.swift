@@ -53,6 +53,7 @@ class SignUpViewController: UIViewController {
 		tf.layer.shadowColor = UIColor.lightGray.cgColor
 		tf.heightAnchor.constraint(equalToConstant: 50).isActive = true
 		tf.layer.cornerRadius = 25
+		tf.isSecureTextEntry = true
 		return tf
 	}()
 	
@@ -107,10 +108,17 @@ class SignUpViewController: UIViewController {
 	}
 	
 	@objc func signUpHandler() {
-//		let profileVC = ProfileViewController()
-//		self.navigationController?.pushViewController(profileVC, animated: true)
-		let vc = TabBarViewController()
-		AppRouter.navigate(to: vc)
+		if !(emailTF.text?.isEmpty ?? true),
+			 !(usernameTF.text?.isEmpty ?? true),
+				!(passTF.text?.isEmpty ?? true) {
+			LocalDataManager.isOnboarded(flag: true)
+			LocalDataManager.setData(
+				userName: usernameTF.text ?? "",
+				email: emailTF.text ?? "",
+				password: passTF.text ?? ""
+			)
+			AppRouter.navigate(to: TabBarViewController())
+		}
 	}
 	
 }

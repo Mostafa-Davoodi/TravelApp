@@ -9,36 +9,73 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 	
-	lazy var friendsButton: BaseUIButton = {
-		let button = BaseUIButton()
-		button.setTitle("See Friends", for: .normal)
-		button.addTarget(self, action: #selector(friendsTapped), for: .touchUpInside)
-		button.backgroundColor = UIColor(hexString: "#58CFC2")
-		button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-		button.widthAnchor.constraint(equalToConstant: 200).isActive = true
-		button.layer.cornerRadius = 25
-		return button
+
+	lazy var avatarView: BaseUIImageView = {
+		let avatar = BaseUIImageView()
+		avatar.image = UIImage(named: "placeHolder")
+		avatar.heightAnchor.constraint(equalToConstant: 160).isActive = true
+		avatar.widthAnchor.constraint(equalToConstant: 160).isActive = true
+		avatar.layer.cornerRadius = 80
+		return avatar
 	}()
 	
-	lazy var logoutButton: BaseUIButton = {
-		let button = BaseUIButton()
-		button.setTitle("Logout", for: .normal)
-		button.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
-		button.backgroundColor = UIColor(hexString: "#58CFC2")
-		button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-		button.widthAnchor.constraint(equalToConstant: 200).isActive = true
-		button.layer.cornerRadius = 25
-		return button
+	lazy var myAccountLabel: BaseUILabel = {
+		let label = BaseUILabel()
+		label.text = "My Account"
+		label.font = UIFont.preferredFont(forTextStyle: .headline)
+		return label
 	}()
+	
+	lazy var notificationLabel: BaseUILabel = {
+		let label = BaseUILabel()
+		label.text = "Notification"
+		label.font = UIFont.preferredFont(forTextStyle: .headline)
+		return label
+	}()
+	
+	lazy var moreLabel: BaseUILabel = {
+		let label = BaseUILabel()
+		label.text = "More"
+		label.font = UIFont.preferredFont(forTextStyle: .headline)
+		return label
+	}()
+	
+	lazy var manageProfileItem = ProfileItemView()
+	lazy var paymentItem = ProfileItemView()
+	lazy var notificationItem = ProfileItemView()
+	lazy var friendsItem = ProfileItemView()
+	lazy var logoutItem = ProfileItemView()
+	
+	lazy var profileMenu: VStack = {
+		let stack = VStack()
+		stack.addArrangedSubview(myAccountLabel)
+		stack.addArrangedSubview(manageProfileItem)
+		stack.addArrangedSubview(paymentItem)
+		stack.addArrangedSubview(notificationLabel)
+		stack.addArrangedSubview(notificationItem)
+		stack.addArrangedSubview(moreLabel)
+		stack.addArrangedSubview(friendsItem)
+		stack.addArrangedSubview(logoutItem)
+		stack.spacing = 20
+		stack.layer.shadowOpacity = 1.0
+		stack.layer.shadowColor = UIColor.lightGray.cgColor
+		stack.backgroundColor = UIColor.white
+		stack.layer.cornerRadius = 25
+		stack.alignment = .leading
+		stack.isLayoutMarginsRelativeArrangement = true
+		stack.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+		return stack
+	}()
+	
 	
 	lazy var contentStack: VStack = {
 		let stack = VStack()
-		stack.addArrangedSubview(friendsButton)
-		stack.addArrangedSubview(logoutButton)
-		stack.alignment = .center
-		stack.spacing = 20
+		stack.addArrangedSubview(avatarView)
+		stack.addArrangedSubview(profileMenu)
+		stack.spacing = 40
 		return stack
 	}()
+
 	
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -57,14 +94,15 @@ class ProfileViewController: UIViewController {
 			contentStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			contentStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 		])
+		
+		
+		
+		manageProfileItem.updateView(title: "Manage profile", imageName: "manageProfileItem")
+		paymentItem.updateView(title: "Payment", imageName: "paymentItem")
+		notificationItem.updateView(title: "Notification", imageName: "notificationItem")
+		friendsItem.updateView(title: "Friends", imageName: "friendsItem")
+		logoutItem.updateView(title: "Logout", imageName: "logoutItem")
+		
 	}
 	
-	@objc func friendsTapped() {
-		let friendsVC = FriendsViewController()
-		self.navigationController?.pushViewController(friendsVC, animated: true)
-	}
-	
-	@objc func logoutTapped() {
-		AppRouter.navigate(to: WelcomeViewController())
-	}
 }

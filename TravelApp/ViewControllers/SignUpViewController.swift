@@ -107,10 +107,19 @@ class SignUpViewController: UIViewController {
 	}
 	
 	@objc func signUpHandler() {
-//		let profileVC = ProfileViewController()
-//		self.navigationController?.pushViewController(profileVC, animated: true)
-		let vc = TabBarViewController()
-		AppRouter.navigate(to: vc)
+
+		if !(emailTF.text?.isEmpty ?? true) &&
+				!(usernameTF.text?.isEmpty ?? true) &&
+				!(passTF.text?.isEmpty ?? true) {
+			
+			LocalDataManager.isOnboarded(flag: true)
+			LocalDataManager.setEmail(email: emailTF.text ?? "")
+			LocalDataManager.setUsername(userName: usernameTF.text ?? "")
+			
+			let vc = TabBarViewController()
+			AppRouter.navigate(to: vc)
+		}
+		
 	}
 	
 }

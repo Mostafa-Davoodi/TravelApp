@@ -17,7 +17,7 @@ class ProfileItemView: HStack {
 	
 	lazy var arrow: BaseUIImageView = {
 		let iv = BaseUIImageView()
-		iv.image = UIImage(named: "chevron")
+		iv.image = UIImage(named: "arrow")
 		return iv
 	}()
 	

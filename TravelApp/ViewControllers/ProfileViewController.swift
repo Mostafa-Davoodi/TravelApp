@@ -19,6 +19,13 @@ class ProfileViewController: UIViewController {
 		return avatar
 	}()
 	
+	lazy var usernameLabel: BaseUILabel = {
+		let label = BaseUILabel()
+		label.font = UIFont.preferredFont(forTextStyle: .headline)
+		label.text = LocalDataManager.getUsername()
+		return label
+	}()
+	
 	lazy var myAccountLabel: BaseUILabel = {
 		let label = BaseUILabel()
 		label.text = "My Account"
@@ -71,8 +78,10 @@ class ProfileViewController: UIViewController {
 	lazy var contentStack: VStack = {
 		let stack = VStack()
 		stack.addArrangedSubview(avatarView)
+		stack.addArrangedSubview(usernameLabel)
 		stack.addArrangedSubview(profileMenu)
 		stack.spacing = 40
+		stack.alignment = .center
 		return stack
 	}()
 
@@ -102,6 +111,28 @@ class ProfileViewController: UIViewController {
 		notificationItem.updateView(title: "Notification", imageName: "notificationItem")
 		friendsItem.updateView(title: "Friends", imageName: "friendsItem")
 		logoutItem.updateView(title: "Logout", imageName: "logoutItem")
+		
+		
+		logoutItem.button.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
+	}
+	
+	
+	@objc func logoutTapped() {
+		let alertViewController = UIAlertController(title: "logout", message: "Do you want to logout from the app?", preferredStyle: .alert)
+		
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+		
+		let yesAction = UIAlertAction(title: "Yes", style: .default) { action in
+			LocalDataManager.logout()
+			let vc = WelcomeViewController()
+			AppRouter.navigate(to: vc)
+		}
+		
+		alertViewController.addAction(cancelAction)
+		alertViewController.addAction(yesAction)
+		
+		self.navigationController?.present(alertViewController, animated: true, completion: nil)
+		
 		
 	}
 	

@@ -133,9 +133,18 @@ class LoginViewController: UIViewController {
 	}
 	
 	@objc func loginHandler() {
-		let vc = TabBarViewController()
-		AppRouter.navigate(to: vc)
-//		let profileVC = ProfileViewController()
-//		self.navigationController?.pushViewController(profileVC, animated: true)
+		
+		if !(emailTF.text?.isEmpty ?? true) &&
+				!(passTF.text?.isEmpty ?? true) {
+			
+			LocalDataManager.isOnboarded(flag: true)
+			LocalDataManager.setEmail(email: emailTF.text ?? "")
+			
+			let vc = TabBarViewController()
+			AppRouter.navigate(to: vc)
+			
+		}
+		
+		
 	}
 }

@@ -7,7 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,
+													UICollectionViewDelegate,
+													UICollectionViewDataSource,
+													UICollectionViewDelegateFlowLayout{
+	
+	let data = DataProvider.makePopularPlaceData()
+	
+	lazy var collectionView: UICollectionView = {
+		let viewLayout = UICollectionViewFlowLayout()
+		viewLayout.scrollDirection = .horizontal
+		let cv = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+		cv.backgroundColor = .white
+		cv.delegate = self
+		cv.dataSource = self
+		cv.translatesAutoresizingMaskIntoConstraints = false
+		cv.showsHorizontalScrollIndicator = false
+		return cv
+	}()
 	
 	lazy var headerImageView: BaseUIImageView = {
 		let iv = BaseUIImageView()
@@ -63,12 +80,18 @@ class HomeViewController: UIViewController {
 		
 		view.backgroundColor = UIColor.white
 		view.addSubview(headerImageView)
+		view.addSubview(collectionView)
 		
 		NSLayoutConstraint.activate([
 			headerImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			headerImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			headerImageView.topAnchor.constraint(equalTo: view.topAnchor),
-			headerImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 2/3)
+			headerImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 2/3),
+			
+			collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+			collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+			collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+			collectionView.topAnchor.constraint(equalTo: headerImageView.bottomAnchor)
 		])
 		
 		headerImageView.addSubview(descStack)
@@ -78,6 +101,31 @@ class HomeViewController: UIViewController {
 			descStack.widthAnchor.constraint(equalToConstant: 200)
 		])
 		
+		collectionView.register(PlaceCell.self, forCellWithReuseIdentifier: "cell")
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return data.count
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PlaceCell
+		
+		cell.imageView.image = data[indexPath.row].image
+		cell.nameLabel.text = data[indexPath.row].name
+		cell.layer.cornerRadius = 24
+		
+		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 1
+	}
+	
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let height = collectionView.frame.height - 20
+		return CGSize(width: 300, height: height)
 	}
 	
 }

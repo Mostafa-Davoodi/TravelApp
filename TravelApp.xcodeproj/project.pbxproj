@@ -30,6 +30,8 @@
 		A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */; };
 		A3CB7DA2272790D300666247 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA1272790D300666247 /* User.swift */; };
 		A3CB7DA42727913100666247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA32727913100666247 /* DataProvider.swift */; };
+		A3D03375273A141D00AD84D2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D03374273A141D00AD84D2 /* Place.swift */; };
+		A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D03376273A173300AD84D2 /* PlaceCell.swift */; };
 		A3D60AD62730C46B00957A85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60AD52730C46B00957A85 /* HomeViewController.swift */; };
 		A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60AD82730C98300957A85 /* ProfileItemView.swift */; };
 		A3D60ADB2730CE1E00957A85 /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60ADA2730CE1E00957A85 /* BaseUIView.swift */; };
@@ -62,6 +64,8 @@
 		A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3CB7DA1272790D300666247 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3CB7DA32727913100666247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		A3D03374273A141D00AD84D2 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		A3D03376273A173300AD84D2 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		A3D60AD52730C46B00957A85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3D60AD82730C98300957A85 /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
 		A3D60ADA2730CE1E00957A85 /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
+				A3D03376273A173300AD84D2 /* PlaceCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				A3CB7DA1272790D300666247 /* User.swift */,
 				A3CB7DA32727913100666247 /* DataProvider.swift */,
+				A3D03374273A141D00AD84D2 /* Place.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */,
+				A3D03375273A141D00AD84D2 /* Place.swift in Sources */,
 				A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */,
 				A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */,
 				A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */,
@@ -281,6 +288,7 @@
 				A3C1F4642722461800C627B9 /* BaseUIImageView.swift in Sources */,
 				A3C1F46E27224E9300C627B9 /* BaseUIButton.swift in Sources */,
 				A351B8C227239391008311D8 /* LoginViewController.swift in Sources */,
+				A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

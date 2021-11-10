@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let window = UIWindow(windowScene: windowScene)
 		
 		if LocalDataManager.isOnboarded() {
-			let vc = TabBarViewController()
+			let vc = ImageViewerViewController()
 			let navigation = UINavigationController(rootViewController: vc)
 			window.rootViewController = navigation
 		} else {
-			let vc = WelcomeViewController()
+			let vc = ImageViewerViewController()
 			let navigation = UINavigationController(rootViewController: vc)
 			window.rootViewController = navigation
 		}

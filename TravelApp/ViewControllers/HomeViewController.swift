@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController,
 													UICollectionViewDelegate,
 													UICollectionViewDataSource,
-													UICollectionViewDelegateFlowLayout{
+													UICollectionViewDelegateFlowLayout {
 	
 	let data = DataProvider.makePopularPlaceData()
 	
@@ -126,6 +126,11 @@ class HomeViewController: UIViewController,
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		let height = collectionView.frame.height - 20
 		return CGSize(width: 300, height: height)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let vc = PlaceDetailViewController()
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 	
 }

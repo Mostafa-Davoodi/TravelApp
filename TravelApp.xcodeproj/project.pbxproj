@@ -17,7 +17,7 @@
 		A353C58E273B442A00AF3156 /* BaseUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58D273B442A00AF3156 /* BaseUIScrollView.swift */; };
 		A353C590273B446E00AF3156 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58F273B446E00AF3156 /* ScrollableView.swift */; };
 		A353C592273B44DA00AF3156 /* VScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C591273B44DA00AF3156 /* VScrollableView.swift */; };
-		A353C594273B450900AF3156 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailView.swift */; };
+		A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailViewController.swift */; };
 		A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */; };
 		A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E5272B8025003997A3 /* TabBarViewController.swift */; };
 		A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E8272B81A8003997A3 /* AppRouter.swift */; };
@@ -35,6 +35,7 @@
 		A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */; };
 		A3CB7DA2272790D300666247 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA1272790D300666247 /* User.swift */; };
 		A3CB7DA42727913100666247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA32727913100666247 /* DataProvider.swift */; };
+		A3CD5A5B2743377E005E83BC /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CD5A5A2743377E005E83BC /* PhotoCell.swift */; };
 		A3D03375273A141D00AD84D2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D03374273A141D00AD84D2 /* Place.swift */; };
 		A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D03376273A173300AD84D2 /* PlaceCell.swift */; };
 		A3D60AD62730C46B00957A85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60AD52730C46B00957A85 /* HomeViewController.swift */; };
@@ -54,7 +55,7 @@
 		A353C58D273B442A00AF3156 /* BaseUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIScrollView.swift; sourceTree = "<group>"; };
 		A353C58F273B446E00AF3156 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		A353C591273B44DA00AF3156 /* VScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollableView.swift; sourceTree = "<group>"; };
-		A353C593273B450900AF3156 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		A353C593273B450900AF3156 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		A3B979E5272B8025003997A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A3B979E8272B81A8003997A3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3CB7DA1272790D300666247 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3CB7DA32727913100666247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		A3CD5A5A2743377E005E83BC /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		A3D03374273A141D00AD84D2 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		A3D03376273A173300AD84D2 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		A3D60AD52730C46B00957A85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				A351B8CA27239E0D008311D8 /* FriendCell.swift */,
 				A3D03376273A173300AD84D2 /* PlaceCell.swift */,
+				A3CD5A5A2743377E005E83BC /* PhotoCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 				A3B979E5272B8025003997A3 /* TabBarViewController.swift */,
 				A3D60AD52730C46B00957A85 /* HomeViewController.swift */,
 				A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */,
-				A353C593273B450900AF3156 /* PlaceDetailView.swift */,
+				A353C593273B450900AF3156 /* PlaceDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -280,7 +283,7 @@
 				A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */,
 				A3D03375273A141D00AD84D2 /* Place.swift in Sources */,
 				A353C58C273B411A00AF3156 /* ImageViewerViewController.swift in Sources */,
-				A353C594273B450900AF3156 /* PlaceDetailView.swift in Sources */,
+				A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */,
 				A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */,
 				A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */,
 				A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */,
@@ -308,6 +311,7 @@
 				A3C1F4642722461800C627B9 /* BaseUIImageView.swift in Sources */,
 				A3C1F46E27224E9300C627B9 /* BaseUIButton.swift in Sources */,
 				A351B8C227239391008311D8 /* LoginViewController.swift in Sources */,
+				A3CD5A5B2743377E005E83BC /* PhotoCell.swift in Sources */,
 				A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

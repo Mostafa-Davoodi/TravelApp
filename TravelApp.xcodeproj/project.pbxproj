@@ -45,6 +45,8 @@
 		A3E8BE7127449576007FC50E /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A3E8BE7027449576007FC50E /* animation.json */; };
 		A3E8BE7427449593007FC50E /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8BE7327449593007FC50E /* AnimationViewController.swift */; };
 		A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A3E8BE7D274498C6007FC50E /* Lottie */; };
+		A3E8BE8127449922007FC50E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = A3E8BE8027449922007FC50E /* Charts */; };
+		A3E8BE8327449C14007FC50E /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8BE8227449C14007FC50E /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,7 @@
 		A3D60ADC2730CE8A00957A85 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		A3E8BE7027449576007FC50E /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		A3E8BE7327449593007FC50E /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		A3E8BE8227449C14007FC50E /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */,
+				A3E8BE8127449922007FC50E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,8 @@
 		A351B8BE272391BA008311D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3E8BE7327449593007FC50E /* AnimationViewController.swift */,
+				A3E8BE8227449C14007FC50E /* ChartViewController.swift */,
 				A3C1F460272241A300C627B9 /* WelcomeViewController.swift */,
 				A351B8BF272391E0008311D8 /* SignUpViewController.swift */,
 				A351B8C127239391008311D8 /* LoginViewController.swift */,
@@ -163,7 +169,7 @@
 		A3C1F44B272240ED00C627B9 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
-				A3E8BE722744957C007FC50E /* animationResources */,
+				A3E8BE722744957C007FC50E /* resources */,
 				A3D60AD72730C97400957A85 /* View */,
 				A3B979E7272B8194003997A3 /* Router */,
 				A314C4962728DDC700AB81CA /* Cell */,
@@ -217,13 +223,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A3E8BE722744957C007FC50E /* animationResources */ = {
+		A3E8BE722744957C007FC50E /* resources */ = {
 			isa = PBXGroup;
 			children = (
 				A3E8BE7027449576007FC50E /* animation.json */,
-				A3E8BE7327449593007FC50E /* AnimationViewController.swift */,
 			);
-			path = animationResources;
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +249,7 @@
 			name = TravelApp;
 			packageProductDependencies = (
 				A3E8BE7D274498C6007FC50E /* Lottie */,
+				A3E8BE8027449922007FC50E /* Charts */,
 			);
 			productName = TravelApp;
 			productReference = A3C1F449272240ED00C627B9 /* TravelApp.app */;
@@ -275,6 +281,7 @@
 			mainGroup = A3C1F440272240ED00C627B9;
 			packageReferences = (
 				A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = A3C1F44A272240ED00C627B9 /* Products */;
 			projectDirPath = "";
@@ -332,6 +339,7 @@
 				A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */,
 				A3C1F46827224CDE00C627B9 /* BaseUIStackView.swift in Sources */,
 				A353C590273B446E00AF3156 /* ScrollableView.swift in Sources */,
+				A3E8BE8327449C14007FC50E /* ChartViewController.swift in Sources */,
 				A3C1F4642722461800C627B9 /* BaseUIImageView.swift in Sources */,
 				A3C1F46E27224E9300C627B9 /* BaseUIButton.swift in Sources */,
 				A351B8C227239391008311D8 /* LoginViewController.swift in Sources */,
@@ -556,6 +564,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -563,6 +579,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		A3E8BE8027449922007FC50E /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

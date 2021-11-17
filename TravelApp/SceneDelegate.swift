@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let window = UIWindow(windowScene: windowScene)
 		
 		if LocalDataManager.isOnboarded() {
-			let vc = AnimationViewController()
+			let vc = ChartViewController()
 			let navigation = UINavigationController(rootViewController: vc)
 			window.rootViewController = navigation
 		} else {

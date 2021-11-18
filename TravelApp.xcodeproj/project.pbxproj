@@ -9,14 +9,10 @@
 /* Begin PBXBuildFile section */
 		A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8BF272391E0008311D8 /* SignUpViewController.swift */; };
 		A351B8C227239391008311D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C127239391008311D8 /* LoginViewController.swift */; };
-		A351B8C4272396DA008311D8 /* BaseUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C3272396DA008311D8 /* BaseUITextField.swift */; };
 		A351B8C727239A3D008311D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C627239A3D008311D8 /* Utils.swift */; };
 		A351B8C927239D85008311D8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C827239D85008311D8 /* FriendsViewController.swift */; };
 		A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8CA27239E0D008311D8 /* FriendCell.swift */; };
 		A353C58C273B411A00AF3156 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */; };
-		A353C58E273B442A00AF3156 /* BaseUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58D273B442A00AF3156 /* BaseUIScrollView.swift */; };
-		A353C590273B446E00AF3156 /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58F273B446E00AF3156 /* ScrollableView.swift */; };
-		A353C592273B44DA00AF3156 /* VScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C591273B44DA00AF3156 /* VScrollableView.swift */; };
 		A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailViewController.swift */; };
 		A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */; };
 		A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E5272B8025003997A3 /* TabBarViewController.swift */; };
@@ -26,12 +22,6 @@
 		A3C1F456272240F000C627B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F455272240F000C627B9 /* Assets.xcassets */; };
 		A3C1F459272240F000C627B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F457272240F000C627B9 /* LaunchScreen.storyboard */; };
 		A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F460272241A300C627B9 /* WelcomeViewController.swift */; };
-		A3C1F4642722461800C627B9 /* BaseUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F4632722461800C627B9 /* BaseUIImageView.swift */; };
-		A3C1F466272247ED00C627B9 /* BaseUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F465272247ED00C627B9 /* BaseUILabel.swift */; };
-		A3C1F46827224CDE00C627B9 /* BaseUIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F46727224CDE00C627B9 /* BaseUIStackView.swift */; };
-		A3C1F46A27224E0400C627B9 /* HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F46927224E0400C627B9 /* HStack.swift */; };
-		A3C1F46C27224E1100C627B9 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F46B27224E1100C627B9 /* VStack.swift */; };
-		A3C1F46E27224E9300C627B9 /* BaseUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F46D27224E9300C627B9 /* BaseUIButton.swift */; };
 		A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */; };
 		A3CB7DA2272790D300666247 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA1272790D300666247 /* User.swift */; };
 		A3CB7DA42727913100666247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA32727913100666247 /* DataProvider.swift */; };
@@ -40,8 +30,7 @@
 		A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D03376273A173300AD84D2 /* PlaceCell.swift */; };
 		A3D60AD62730C46B00957A85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60AD52730C46B00957A85 /* HomeViewController.swift */; };
 		A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60AD82730C98300957A85 /* ProfileItemView.swift */; };
-		A3D60ADB2730CE1E00957A85 /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60ADA2730CE1E00957A85 /* BaseUIView.swift */; };
-		A3D60ADD2730CE8A00957A85 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D60ADC2730CE8A00957A85 /* EmptyView.swift */; };
+		A3D91362274636C1007E4D02 /* ComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3D91361274636C1007E4D02 /* ComponentKit */; };
 		A3E8BE7127449576007FC50E /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A3E8BE7027449576007FC50E /* animation.json */; };
 		A3E8BE7427449593007FC50E /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8BE7327449593007FC50E /* AnimationViewController.swift */; };
 		A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A3E8BE7D274498C6007FC50E /* Lottie */; };
@@ -52,14 +41,10 @@
 /* Begin PBXFileReference section */
 		A351B8BF272391E0008311D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A351B8C127239391008311D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A351B8C3272396DA008311D8 /* BaseUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITextField.swift; sourceTree = "<group>"; };
 		A351B8C627239A3D008311D8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A351B8C827239D85008311D8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A351B8CA27239E0D008311D8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
-		A353C58D273B442A00AF3156 /* BaseUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIScrollView.swift; sourceTree = "<group>"; };
-		A353C58F273B446E00AF3156 /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
-		A353C591273B44DA00AF3156 /* VScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollableView.swift; sourceTree = "<group>"; };
 		A353C593273B450900AF3156 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		A3B979E5272B8025003997A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -71,12 +56,6 @@
 		A3C1F458272240F000C627B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3C1F45A272240F000C627B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C1F460272241A300C627B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		A3C1F4632722461800C627B9 /* BaseUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIImageView.swift; sourceTree = "<group>"; };
-		A3C1F465272247ED00C627B9 /* BaseUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUILabel.swift; sourceTree = "<group>"; };
-		A3C1F46727224CDE00C627B9 /* BaseUIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIStackView.swift; sourceTree = "<group>"; };
-		A3C1F46927224E0400C627B9 /* HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStack.swift; sourceTree = "<group>"; };
-		A3C1F46B27224E1100C627B9 /* VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStack.swift; sourceTree = "<group>"; };
-		A3C1F46D27224E9300C627B9 /* BaseUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIButton.swift; sourceTree = "<group>"; };
 		A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3CB7DA1272790D300666247 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3CB7DA32727913100666247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -85,8 +64,6 @@
 		A3D03376273A173300AD84D2 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		A3D60AD52730C46B00957A85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3D60AD82730C98300957A85 /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
-		A3D60ADA2730CE1E00957A85 /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
-		A3D60ADC2730CE8A00957A85 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		A3E8BE7027449576007FC50E /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		A3E8BE7327449593007FC50E /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		A3E8BE8227449C14007FC50E /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */,
+				A3D91362274636C1007E4D02 /* ComponentKit in Frameworks */,
 				A3E8BE8127449922007FC50E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +154,6 @@
 				A3CB7DA0272790B800666247 /* Data */,
 				A351B8C527239A30008311D8 /* Utils */,
 				A351B8BE272391BA008311D8 /* ViewControllers */,
-				A3C1F4622722460500C627B9 /* Components */,
 				A3C1F44C272240ED00C627B9 /* AppDelegate.swift */,
 				A3C1F44E272240ED00C627B9 /* SceneDelegate.swift */,
 				A3C1F455272240F000C627B9 /* Assets.xcassets */,
@@ -184,25 +161,6 @@
 				A3C1F45A272240F000C627B9 /* Info.plist */,
 			);
 			path = TravelApp;
-			sourceTree = "<group>";
-		};
-		A3C1F4622722460500C627B9 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				A3C1F4632722461800C627B9 /* BaseUIImageView.swift */,
-				A3C1F465272247ED00C627B9 /* BaseUILabel.swift */,
-				A3C1F46727224CDE00C627B9 /* BaseUIStackView.swift */,
-				A3C1F46927224E0400C627B9 /* HStack.swift */,
-				A3C1F46B27224E1100C627B9 /* VStack.swift */,
-				A3C1F46D27224E9300C627B9 /* BaseUIButton.swift */,
-				A351B8C3272396DA008311D8 /* BaseUITextField.swift */,
-				A3D60ADA2730CE1E00957A85 /* BaseUIView.swift */,
-				A3D60ADC2730CE8A00957A85 /* EmptyView.swift */,
-				A353C58D273B442A00AF3156 /* BaseUIScrollView.swift */,
-				A353C58F273B446E00AF3156 /* ScrollableView.swift */,
-				A353C591273B44DA00AF3156 /* VScrollableView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		A3CB7DA0272790B800666247 /* Data */ = {
@@ -250,6 +208,7 @@
 			packageProductDependencies = (
 				A3E8BE7D274498C6007FC50E /* Lottie */,
 				A3E8BE8027449922007FC50E /* Charts */,
+				A3D91361274636C1007E4D02 /* ComponentKit */,
 			);
 			productName = TravelApp;
 			productReference = A3C1F449272240ED00C627B9 /* TravelApp.app */;
@@ -282,6 +241,7 @@
 			packageReferences = (
 				A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */,
+				A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */,
 			);
 			productRefGroup = A3C1F44A272240ED00C627B9 /* Products */;
 			projectDirPath = "";
@@ -317,31 +277,19 @@
 				A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */,
 				A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */,
 				A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */,
-				A3C1F46C27224E1100C627B9 /* VStack.swift in Sources */,
-				A3D60ADD2730CE8A00957A85 /* EmptyView.swift in Sources */,
 				A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */,
 				A3D60AD62730C46B00957A85 /* HomeViewController.swift in Sources */,
 				A351B8C927239D85008311D8 /* FriendsViewController.swift in Sources */,
 				A3CB7DA42727913100666247 /* DataProvider.swift in Sources */,
-				A353C58E273B442A00AF3156 /* BaseUIScrollView.swift in Sources */,
 				A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */,
 				A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */,
 				A3CB7DA2272790D300666247 /* User.swift in Sources */,
 				A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */,
 				A351B8C727239A3D008311D8 /* Utils.swift in Sources */,
-				A3C1F46A27224E0400C627B9 /* HStack.swift in Sources */,
-				A353C592273B44DA00AF3156 /* VScrollableView.swift in Sources */,
-				A3D60ADB2730CE1E00957A85 /* BaseUIView.swift in Sources */,
-				A351B8C4272396DA008311D8 /* BaseUITextField.swift in Sources */,
 				A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */,
-				A3C1F466272247ED00C627B9 /* BaseUILabel.swift in Sources */,
 				A3E8BE7427449593007FC50E /* AnimationViewController.swift in Sources */,
 				A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */,
-				A3C1F46827224CDE00C627B9 /* BaseUIStackView.swift in Sources */,
-				A353C590273B446E00AF3156 /* ScrollableView.swift in Sources */,
 				A3E8BE8327449C14007FC50E /* ChartViewController.swift in Sources */,
-				A3C1F4642722461800C627B9 /* BaseUIImageView.swift in Sources */,
-				A3C1F46E27224E9300C627B9 /* BaseUIButton.swift in Sources */,
 				A351B8C227239391008311D8 /* LoginViewController.swift in Sources */,
 				A3CD5A5B2743377E005E83BC /* PhotoCell.swift in Sources */,
 				A3D03377273A173300AD84D2 /* PlaceCell.swift in Sources */,
@@ -556,6 +504,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mostafa-Davoodi/ComponentKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -575,6 +531,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A3D91361274636C1007E4D02 /* ComponentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */;
+			productName = ComponentKit;
+		};
 		A3E8BE7D274498C6007FC50E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */;

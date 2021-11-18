@@ -7,6 +7,7 @@
 
 import UIKit
 import Charts
+import ComponentKit
 
 class ChartViewController: UIViewController {
 	

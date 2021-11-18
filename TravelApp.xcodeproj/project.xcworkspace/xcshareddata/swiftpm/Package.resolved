@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "ComponentKit",
+        "repositoryURL": "https://github.com/Mostafa-Davoodi/ComponentKit",
+        "state": {
+          "branch": null,
+          "revision": "1c45cce3a23076db0a5528a124ae84df9d0c3697",
+          "version": "1.0.2"
+        }
+      },
+      {
         "package": "Lottie",
         "repositoryURL": "https://github.com/airbnb/lottie-ios",
         "state": {

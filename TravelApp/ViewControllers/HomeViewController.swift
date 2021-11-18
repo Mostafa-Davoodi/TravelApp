@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ComponentKit
 
 class HomeViewController: UIViewController,
 													UICollectionViewDelegate,

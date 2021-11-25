@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30448BD27504D8700AD34F9 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30448BC27504D8700AD34F9 /* Serializer.swift */; };
 		A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8BF272391E0008311D8 /* SignUpViewController.swift */; };
 		A351B8C227239391008311D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C127239391008311D8 /* LoginViewController.swift */; };
 		A351B8C727239A3D008311D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C627239A3D008311D8 /* Utils.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30448BC27504D8700AD34F9 /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		A351B8BF272391E0008311D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A351B8C127239391008311D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A351B8C627239A3D008311D8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A3CB7DA1272790D300666247 /* User.swift */,
 				A3CB7DA32727913100666247 /* DataProvider.swift */,
 				A3D03374273A141D00AD84D2 /* Place.swift */,
+				A30448BC27504D8700AD34F9 /* Serializer.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				A3CB7DA42727913100666247 /* DataProvider.swift in Sources */,
 				A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */,
 				A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */,
+				A30448BD27504D8700AD34F9 /* Serializer.swift in Sources */,
 				A3CB7DA2272790D300666247 /* User.swift in Sources */,
 				A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */,
 				A351B8C727239A3D008311D8 /* Utils.swift in Sources */,

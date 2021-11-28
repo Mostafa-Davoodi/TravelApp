@@ -73,6 +73,7 @@ class HomeViewController: UIViewController,
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 		self.parent?.title = "Home"
+		self.parent?.navigationItem.rightBarButtonItems = []
 	}
 	
 	

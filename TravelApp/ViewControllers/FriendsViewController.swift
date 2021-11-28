@@ -15,6 +15,7 @@ class FriendsViewController: UITableViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 		self.parent?.title = "Friend"
+		self.parent?.navigationItem.rightBarButtonItems = []
 	}
 	
 	override func viewDidLoad() {

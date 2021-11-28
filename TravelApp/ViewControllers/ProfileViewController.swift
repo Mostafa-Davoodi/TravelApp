@@ -7,6 +7,7 @@
 
 import UIKit
 import ComponentKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 	
@@ -91,6 +92,7 @@ class ProfileViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 		self.parent?.title = "Profile"
+		self.parent?.navigationItem.rightBarButtonItems = []
 	}
 	
 	override func viewDidLoad() {
@@ -118,23 +120,55 @@ class ProfileViewController: UIViewController {
 	}
 	
 	
+//	@objc func logoutTapped() {
+//		let alertViewController = UIAlertController(title: "logout", message: "Do you want to logout from the app?", preferredStyle: .alert)
+//
+//		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//		let yesAction = UIAlertAction(title: "Yes", style: .default) { action in
+//			LocalDataManager.logout()
+//			let vc = WelcomeViewController()
+//			AppRouter.navigate(to: vc)
+//		}
+//
+//		alertViewController.addAction(cancelAction)
+//		alertViewController.addAction(yesAction)
+//
+//		self.navigationController?.present(alertViewController, animated: true, completion: nil)
+//	}
+	
 	@objc func logoutTapped() {
 		let alertViewController = UIAlertController(title: "logout", message: "Do you want to logout from the app?", preferredStyle: .alert)
-		
+
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-		
+
 		let yesAction = UIAlertAction(title: "Yes", style: .default) { action in
-			LocalDataManager.logout()
-			let vc = WelcomeViewController()
-			AppRouter.navigate(to: vc)
+			self.logoutHandler()
 		}
-		
+
 		alertViewController.addAction(cancelAction)
 		alertViewController.addAction(yesAction)
-		
+
 		self.navigationController?.present(alertViewController, animated: true, completion: nil)
-		
-		
+	}
+	
+	func logoutHandler() {
+		guard let user = Auth.auth().currentUser else { return }
+
+		let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
+		onlineRef.removeValue { error, _ in
+			if let error = error {
+				print("Removing online failed: \(error)")
+				return
+			}
+			do {
+				try Auth.auth().signOut()
+				let vc = WelcomeViewController()
+				AppRouter.navigate(to: vc)
+			} catch let error {
+				print("Auth sign out failed: \(error)")
+			}
+		}
 	}
 	
 }

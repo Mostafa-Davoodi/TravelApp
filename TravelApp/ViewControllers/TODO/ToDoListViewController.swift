@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ToDoListViewController: UITableViewController {
+	
+	let ref = Database.database().reference(withPath: "todo-items")
+	var refObserver: [DatabaseHandle] = []
+	
 	
 	var items: [ToDo] = []
 	var addBarButtonItem = UIBarButtonItem()
@@ -29,13 +34,42 @@ class ToDoListViewController: UITableViewController {
 		self.parent?.navigationItem.rightBarButtonItem = addBarButtonItem
 	}
 	
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		let completed = ref.observe(.value) { snapshot in
+			var newItems: [ToDo] = []
+			for child in snapshot.children {
+				if let snapshot = child as? DataSnapshot,
+					 let toDoItem = ToDo(snapshot: snapshot) {
+					newItems.append(toDoItem)
+				}
+			}
+			self.items = newItems
+			self.tableView.reloadData()
+			
+		}
+		
+		refObserver.append(completed)
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		refObserver.forEach(ref.removeObserver(withHandle:))
+		refObserver = []
+	}
+	
 	@objc func addToDoItem(){
-		let alert = UIAlertController(title: "ToDO Item", message: "Add an item", preferredStyle: .alert)
+		let alert = UIAlertController(title: "ToDo Item", message: "Add an item", preferredStyle: .alert)
 		
 		let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
 			//TODO: save action should be completed here
 			if let title = alert.textFields?.first?.text {
 				print("value for text field: \(title)")
+				let todoItem = ToDo(title: title)
+				let toDoItemRef = self.ref.child(title.lowercased())
+				toDoItemRef.setValue(todoItem.toAnyObject())
 			}
 		}
 		
@@ -65,5 +99,12 @@ extension ToDoListViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as! ToDoCell
 		cell.updateView(data: items[indexPath.item])
 		return cell
+	}
+	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			let toDoItem = items[indexPath.item]
+			toDoItem.ref?.removeValue()
+		}
 	}
 }

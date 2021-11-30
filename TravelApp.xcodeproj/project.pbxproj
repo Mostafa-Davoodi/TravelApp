@@ -20,6 +20,10 @@
 		A3B29EBB2755B8B0002732F1 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B29EBA2755B8B0002732F1 /* ToDo.swift */; };
 		A3B29EBD2755B901002732F1 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B29EBC2755B901002732F1 /* ToDoCell.swift */; };
 		A3B29EBF2755C13B002732F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3B29EBE2755C13B002732F1 /* GoogleService-Info.plist */; };
+		A3B29EC22755C292002732F1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A3B29EC12755C292002732F1 /* FirebaseAnalytics */; };
+		A3B29EC42755C292002732F1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A3B29EC32755C292002732F1 /* FirebaseAuth */; };
+		A3B29EC62755C292002732F1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A3B29EC52755C292002732F1 /* FirebaseDatabase */; };
+		A3B29EC82755C292002732F1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A3B29EC72755C292002732F1 /* FirebaseMessaging */; };
 		A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E5272B8025003997A3 /* TabBarViewController.swift */; };
 		A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E8272B81A8003997A3 /* AppRouter.swift */; };
 		A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F44C272240ED00C627B9 /* AppDelegate.swift */; };
@@ -84,8 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B29EC62755C292002732F1 /* FirebaseDatabase in Frameworks */,
 				A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */,
+				A3B29EC82755C292002732F1 /* FirebaseMessaging in Frameworks */,
+				A3B29EC42755C292002732F1 /* FirebaseAuth in Frameworks */,
 				A3D91362274636C1007E4D02 /* ComponentKit in Frameworks */,
+				A3B29EC22755C292002732F1 /* FirebaseAnalytics in Frameworks */,
 				A3E8BE8127449922007FC50E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +240,10 @@
 				A3E8BE7D274498C6007FC50E /* Lottie */,
 				A3E8BE8027449922007FC50E /* Charts */,
 				A3D91361274636C1007E4D02 /* ComponentKit */,
+				A3B29EC12755C292002732F1 /* FirebaseAnalytics */,
+				A3B29EC32755C292002732F1 /* FirebaseAuth */,
+				A3B29EC52755C292002732F1 /* FirebaseDatabase */,
+				A3B29EC72755C292002732F1 /* FirebaseMessaging */,
 			);
 			productName = TravelApp;
 			productReference = A3C1F449272240ED00C627B9 /* TravelApp.app */;
@@ -265,6 +277,7 @@
 				A3E8BE7C274498C6007FC50E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */,
 				A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */,
+				A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A3C1F44A272240ED00C627B9 /* Products */;
 			projectDirPath = "";
@@ -532,6 +545,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mostafa-Davoodi/ComponentKit";
@@ -559,6 +580,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A3B29EC12755C292002732F1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A3B29EC32755C292002732F1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A3B29EC52755C292002732F1 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A3B29EC72755C292002732F1 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3B29EC02755C292002732F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		A3D91361274636C1007E4D02 /* ComponentKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */;

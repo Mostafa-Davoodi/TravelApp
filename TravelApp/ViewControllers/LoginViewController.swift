@@ -7,8 +7,11 @@
 
 import UIKit
 import ComponentKit
+import Firebase
 
 class LoginViewController: UIViewController {
+	
+	var handle: AuthStateDidChangeListenerHandle?
 	
 	lazy var logo: BaseUIImageView = {
 		let iv = BaseUIImageView()
@@ -133,16 +136,44 @@ class LoginViewController: UIViewController {
 		])
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		handle = Auth.auth().addStateDidChangeListener({ _, user in
+			if user != nil {
+				let vc = TabBarViewController()
+				AppRouter.navigate(to: vc)
+			}
+		})
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		guard let handle = handle else { return }
+		Auth.auth().removeStateDidChangeListener(handle)
+	}
+	
 	@objc func loginHandler() {
 		
 		if !(emailTF.text?.isEmpty ?? true) &&
 				!(passTF.text?.isEmpty ?? true) {
 			
-			LocalDataManager.isOnboarded(flag: true)
-			LocalDataManager.setEmail(email: emailTF.text ?? "")
+//			LocalDataManager.isOnboarded(flag: true)
+//			LocalDataManager.setEmail(email: emailTF.text ?? "")
+//
+//			let vc = TabBarViewController()
+//			AppRouter.navigate(to: vc)
 			
-			let vc = TabBarViewController()
-			AppRouter.navigate(to: vc)
+			let email = emailTF.text ?? ""
+			let password = passTF.text ?? ""
+			
+			Auth.auth().signIn(withEmail: email, password: password) { user, error in
+				if let error = error, user == nil {
+					let alert = UIAlertController(title: "Sign in failed", message: error.localizedDescription, preferredStyle: .alert)
+					
+					alert.addAction(UIAlertAction(title: "OK", style: .default))
+					self.present(alert, animated: true, completion: nil)
+				}
+			}
 			
 		}
 		

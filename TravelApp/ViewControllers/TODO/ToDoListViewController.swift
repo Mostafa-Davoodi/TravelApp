@@ -38,7 +38,9 @@ class ToDoListViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		let completed = ref.observe(.value) { snapshot in
+		let completed = ref
+			.queryOrdered(byChild: "isCompleted")
+			.observe(.value) { snapshot in
 			var newItems: [ToDo] = []
 			for child in snapshot.children {
 				if let snapshot = child as? DataSnapshot,
@@ -106,5 +108,16 @@ extension ToDoListViewController {
 			let toDoItem = items[indexPath.item]
 			toDoItem.ref?.removeValue()
 		}
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		items[indexPath.row].isCompleted.toggle()
+		
+		// #1 update our table view
+		tableView.reloadRows(at: [indexPath], with: .fade)
+		
+		// #2 apply this change on firebase side
+		items[indexPath.row].ref?.updateChildValues(["isCompleted": items[indexPath.row].isCompleted])
+		
 	}
 }

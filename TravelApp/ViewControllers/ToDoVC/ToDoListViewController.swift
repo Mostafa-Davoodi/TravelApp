@@ -20,6 +20,7 @@ class ToDoListViewController: UITableViewController {
 	var items: [ToDo] = []
 	var user: CurrentUser?
 	var onlineUserCount = UIBarButtonItem()
+	var addBarButtonItem = UIBarButtonItem()
 	var handle: AuthStateDidChangeListenerHandle?
 	
 	override func viewDidLoad() {
@@ -84,6 +85,10 @@ class ToDoListViewController: UITableViewController {
 		super.viewDidDisappear(true)
 		refObservers.forEach(ref.removeObserver(withHandle:))
 		refObservers = []
+		usersRefObservers.forEach(usersRef.removeObserver(withHandle:))
+		usersRefObservers = []
+		guard let handle = handle else { return }
+		Auth.auth().removeStateDidChangeListener(handle)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -91,7 +96,16 @@ class ToDoListViewController: UITableViewController {
 		
 		self.parent?.title = "ToDo List"
 		
-		self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addToDoItem))
+		
+		addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addToDoItem))
+		
+		onlineUserCount = UIBarButtonItem(
+			title: "1",
+			style: .plain,
+			target: self,
+			action: #selector(onlineUserCountDidTouch))
+		
+		self.parent?.navigationItem.rightBarButtonItems = [onlineUserCount, addBarButtonItem]
 	}
 	
 	
@@ -125,6 +139,11 @@ class ToDoListViewController: UITableViewController {
 		present(alert, animated: true, completion: nil)
 		
 		
+	}
+	
+	@objc func onlineUserCountDidTouch(){
+		let vc = OnlineUsersTableViewController()
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 	
 }

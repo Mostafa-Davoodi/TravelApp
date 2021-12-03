@@ -15,6 +15,7 @@
 		A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8CA27239E0D008311D8 /* FriendCell.swift */; };
 		A353C58C273B411A00AF3156 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */; };
 		A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailViewController.swift */; };
+		A37E39532758733E005E16E6 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A37E39522758733E005E16E6 /* JTAppleCalendar */; };
 		A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */; };
 		A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E5272B8025003997A3 /* TabBarViewController.swift */; };
 		A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E8272B81A8003997A3 /* AppRouter.swift */; };
@@ -24,6 +25,7 @@
 		A3C1F456272240F000C627B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F455272240F000C627B9 /* Assets.xcassets */; };
 		A3C1F459272240F000C627B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C1F457272240F000C627B9 /* LaunchScreen.storyboard */; };
 		A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1F460272241A300C627B9 /* WelcomeViewController.swift */; };
+		A3C20C762759BD160047FD94 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C20C752759BD160047FD94 /* Networking.swift */; };
 		A3CB7D9F27278A4F00666247 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */; };
 		A3CB7DA2272790D300666247 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA1272790D300666247 /* User.swift */; };
 		A3CB7DA42727913100666247 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB7DA32727913100666247 /* DataProvider.swift */; };
@@ -69,6 +71,7 @@
 		A3C1F458272240F000C627B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3C1F45A272240F000C627B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3C1F460272241A300C627B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A3C20C752759BD160047FD94 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		A3CB7D9E27278A4F00666247 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3CB7DA1272790D300666247 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3CB7DA32727913100666247 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3E603172752CE0D00757300 /* FirebaseDatabase in Frameworks */,
+				A37E39532758733E005E16E6 /* JTAppleCalendar in Frameworks */,
 				A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */,
 				A3E603192752CE0D00757300 /* FirebaseMessaging in Frameworks */,
 				A3E603152752CE0D00757300 /* FirebaseAuth in Frameworks */,
@@ -140,6 +144,7 @@
 			children = (
 				A351B8C627239A3D008311D8 /* Utils.swift */,
 				A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */,
+				A3C20C752759BD160047FD94 /* Networking.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				A3E603142752CE0D00757300 /* FirebaseAuth */,
 				A3E603162752CE0D00757300 /* FirebaseDatabase */,
 				A3E603182752CE0D00757300 /* FirebaseMessaging */,
+				A37E39522758733E005E16E6 /* JTAppleCalendar */,
 			);
 			productName = TravelApp;
 			productReference = A3C1F449272240ED00C627B9 /* TravelApp.app */;
@@ -284,6 +290,7 @@
 				A3E8BE7F27449922007FC50E /* XCRemoteSwiftPackageReference "Charts" */,
 				A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */,
 				A3E603112752CE0D00757300 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A37E39512758733E005E16E6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
 			);
 			productRefGroup = A3C1F44A272240ED00C627B9 /* Products */;
 			projectDirPath = "";
@@ -334,6 +341,7 @@
 				A351B8C0272391E0008311D8 /* SignUpViewController.swift in Sources */,
 				A351B8C727239A3D008311D8 /* Utils.swift in Sources */,
 				A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */,
+				A3C20C762759BD160047FD94 /* Networking.swift in Sources */,
 				A3E8BE7427449593007FC50E /* AnimationViewController.swift in Sources */,
 				A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */,
 				A3E8BE8327449C14007FC50E /* ChartViewController.swift in Sources */,
@@ -553,6 +561,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A37E39512758733E005E16E6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mostafa-Davoodi/ComponentKit";
@@ -588,6 +604,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A37E39522758733E005E16E6 /* JTAppleCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A37E39512758733E005E16E6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
+			productName = JTAppleCalendar;
+		};
 		A3D91361274636C1007E4D02 /* ComponentKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */;

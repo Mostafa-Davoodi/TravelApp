@@ -39,8 +39,6 @@ class TabBarViewController: UITabBarController {
 		
 		viewControllers = [homeVC, profileVC, toDoVC, friendsVC]
 		
-		
-		Networking.sampleApi()
 	}
 	
 }

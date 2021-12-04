@@ -27,7 +27,46 @@ struct EmployeeResponse: Codable {
 	
 }
 
+struct PostResponse: Codable {
+	var status: String?
+}
+
 class Networking {
+	
+	static func samplePostApi(body: Employee) {
+		let session = URLSession.shared
+		let url = URL(string: "http://dummy.restapiexample.com/api/v1/create")!
+		var request = URLRequest(url: url)
+		request.httpMethod = "POST"
+//		request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+		if let bodyJson = try? JSONEncoder().encode(body) {
+//			request.httpBody = bodyJson
+			
+			let task = session.dataTask(with: request) { data, response, error in
+				
+				if let error = error {
+					self.handle(error: error)
+				} else {
+					if let data = data,
+						 let response = response as? HTTPURLResponse,
+						 (200...299).contains(response.statusCode) {
+						let deserializedResponse = self.deserializePostResponse(data: data)
+						print(deserializedResponse)
+					} else {
+						self.handleServerError(response: response)
+					}
+					print(data)
+					print(response)
+				}
+				
+			}
+			
+			task.resume()
+		}
+		
+		
+		
+	}
 	
 	static func sampleApi() {
 		let session = URLSession.shared
@@ -57,6 +96,16 @@ class Networking {
 		let decoder = JSONDecoder()
 		do {
 			return try decoder.decode(EmployeeResponse.self, from: data)
+		} catch {
+			print(error.localizedDescription)
+			return nil
+		}
+	}
+	
+	static func deserializePostResponse(data: Data) -> PostResponse? {
+		let decoder = JSONDecoder()
+		do {
+			return try decoder.decode(PostResponse.self, from: data)
 		} catch {
 			print(error.localizedDescription)
 			return nil

@@ -17,6 +17,8 @@
 		A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailViewController.swift */; };
 		A37E39532758733E005E16E6 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A37E39522758733E005E16E6 /* JTAppleCalendar */; };
 		A37FFA4127321BAD00C24C8C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */; };
+		A3808182275DCD7C007C5A76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3808181275DCD7C007C5A76 /* Alamofire */; };
+		A3808185275DCE7D007C5A76 /* NetworkingV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3808184275DCE7D007C5A76 /* NetworkingV2.swift */; };
 		A3B979E6272B8025003997A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E5272B8025003997A3 /* TabBarViewController.swift */; };
 		A3B979E9272B81A8003997A3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B979E8272B81A8003997A3 /* AppRouter.swift */; };
 		A3BF897127534FDD00E92694 /* OnlineUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF897027534FDD00E92694 /* OnlineUsersTableViewController.swift */; };
@@ -61,6 +63,7 @@
 		A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		A353C593273B450900AF3156 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		A3808184275DCE7D007C5A76 /* NetworkingV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingV2.swift; sourceTree = "<group>"; };
 		A3B979E5272B8025003997A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A3B979E8272B81A8003997A3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		A3BF897027534FDD00E92694 /* OnlineUsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUsersTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3808182275DCD7C007C5A76 /* Alamofire in Frameworks */,
 				A3E603172752CE0D00757300 /* FirebaseDatabase in Frameworks */,
 				A37E39532758733E005E16E6 /* JTAppleCalendar in Frameworks */,
 				A3E8BE7E274498C6007FC50E /* Lottie in Frameworks */,
@@ -144,9 +148,17 @@
 			children = (
 				A351B8C627239A3D008311D8 /* Utils.swift */,
 				A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */,
-				A3C20C752759BD160047FD94 /* Networking.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A3808183275DCE69007C5A76 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A3C20C752759BD160047FD94 /* Networking.swift */,
+				A3808184275DCE7D007C5A76 /* NetworkingV2.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		A3B979E7272B8194003997A3 /* Router */ = {
@@ -185,6 +197,7 @@
 		A3C1F44B272240ED00C627B9 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
+				A3808183275DCE69007C5A76 /* Networking */,
 				A3E8BE722744957C007FC50E /* resources */,
 				A3D60AD72730C97400957A85 /* View */,
 				A3B979E7272B8194003997A3 /* Router */,
@@ -256,6 +269,7 @@
 				A3E603162752CE0D00757300 /* FirebaseDatabase */,
 				A3E603182752CE0D00757300 /* FirebaseMessaging */,
 				A37E39522758733E005E16E6 /* JTAppleCalendar */,
+				A3808181275DCD7C007C5A76 /* Alamofire */,
 			);
 			productName = TravelApp;
 			productReference = A3C1F449272240ED00C627B9 /* TravelApp.app */;
@@ -291,6 +305,7 @@
 				A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */,
 				A3E603112752CE0D00757300 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A37E39512758733E005E16E6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
+				A3808180275DCD7C007C5A76 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A3C1F44A272240ED00C627B9 /* Products */;
 			projectDirPath = "";
@@ -323,6 +338,7 @@
 				A3C1F461272241A300C627B9 /* WelcomeViewController.swift in Sources */,
 				A3D03375273A141D00AD84D2 /* Place.swift in Sources */,
 				A353C58C273B411A00AF3156 /* ImageViewerViewController.swift in Sources */,
+				A3808185275DCE7D007C5A76 /* NetworkingV2.swift in Sources */,
 				A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */,
 				A3C1F44D272240ED00C627B9 /* AppDelegate.swift in Sources */,
 				A3C1F44F272240ED00C627B9 /* SceneDelegate.swift in Sources */,
@@ -569,6 +585,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		A3808180275DCD7C007C5A76 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		A3D91360274636C1007E4D02 /* XCRemoteSwiftPackageReference "ComponentKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mostafa-Davoodi/ComponentKit";
@@ -608,6 +632,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A37E39512758733E005E16E6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
 			productName = JTAppleCalendar;
+		};
+		A3808181275DCD7C007C5A76 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3808180275DCD7C007C5A76 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		A3D91361274636C1007E4D02 /* ComponentKit */ = {
 			isa = XCSwiftPackageProductDependency;

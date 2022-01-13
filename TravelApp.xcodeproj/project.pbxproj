@@ -13,6 +13,7 @@
 		A351B8C727239A3D008311D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C627239A3D008311D8 /* Utils.swift */; };
 		A351B8C927239D85008311D8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8C827239D85008311D8 /* FriendsViewController.swift */; };
 		A351B8CB27239E0D008311D8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A351B8CA27239E0D008311D8 /* FriendCell.swift */; };
+		A352892B278FB26C00AE9C08 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352892A278FB26C00AE9C08 /* FileUtils.swift */; };
 		A353C58C273B411A00AF3156 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */; };
 		A353C594273B450900AF3156 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A353C593273B450900AF3156 /* PlaceDetailViewController.swift */; };
 		A37E39532758733E005E16E6 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A37E39522758733E005E16E6 /* JTAppleCalendar */; };
@@ -60,6 +61,7 @@
 		A351B8C627239A3D008311D8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A351B8C827239D85008311D8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A351B8CA27239E0D008311D8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		A352892A278FB26C00AE9C08 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		A353C58B273B411A00AF3156 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		A353C593273B450900AF3156 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				A351B8C627239A3D008311D8 /* Utils.swift */,
 				A37FFA4027321BAD00C24C8C /* LocalDataManager.swift */,
+				A352892A278FB26C00AE9C08 /* FileUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				A3D60AD92730C98300957A85 /* ProfileItemView.swift in Sources */,
 				A3E8BE8327449C14007FC50E /* ChartViewController.swift in Sources */,
 				A351B8C227239391008311D8 /* LoginViewController.swift in Sources */,
+				A352892B278FB26C00AE9C08 /* FileUtils.swift in Sources */,
 				A3CD5A5B2743377E005E83BC /* PhotoCell.swift in Sources */,
 				A3E6031B2752CEFB00757300 /* ToDoListViewController.swift in Sources */,
 				A3E6032127532C6700757300 /* CurrentUser.swift in Sources */,

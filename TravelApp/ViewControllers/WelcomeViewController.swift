@@ -7,6 +7,8 @@
 
 import UIKit
 import ComponentKit
+import Foundation
+import AVFoundation
 
 class WelcomeViewController: UIViewController {
 	
